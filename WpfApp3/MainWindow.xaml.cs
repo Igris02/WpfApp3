@@ -55,21 +55,17 @@ namespace WpfApp3
                 MessageBox.Show("Age must be a number.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            if (!int.TryParse(number, out int nums))
-            {
-                MessageBox.Show("Number must be a number.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+           
 
             Students.Add(new Studentss
             {
                 Name = name,
-                Sex =  sex,
+                Sex = sex,
                 Age = ages,
                 Bday = birthday,
                 Address = address,
                 Email = email,
-                Number = nums
+                Number = number
             });
 
             RefreshListBox();

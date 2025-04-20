@@ -14,6 +14,6 @@ namespace WpfApp3
         public string Bday { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public int Number { get; set; }
+        public string Number { get; set; }
     }
 }
