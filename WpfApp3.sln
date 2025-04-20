@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp3", "WpfApp3\WpfApp3.csproj", "{A5BEA955-6245-4532-8752-8A353988A186}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentHandler", "WpfApp3\StudentHandler.csproj", "{A5BEA955-6245-4532-8752-8A353988A186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,23 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="499" Width="500" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Label Content="Full Name:" HorizontalAlignment="Left" Margin="70,70,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,70,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="Sex:" HorizontalAlignment="Left" Margin="70,116,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,116,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="Age:" HorizontalAlignment="Left" Margin="70,162,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,162,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="BirthDate:" HorizontalAlignment="Left" Margin="70,207,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,207,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="Address:" HorizontalAlignment="Left" Margin="70,254,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,254,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="70,300,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,300,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
-        <Label Content="Number:" HorizontalAlignment="Left" Margin="70,346,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="174,346,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
+        Title="MainWindow" Height="499" Width="470" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF73FABB">
+        <Label Content="Full Name:" HorizontalAlignment="Left" Margin="14,70,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="FullName" HorizontalAlignment="Left" Margin="118,70,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
+        <Label Content="Sex:" HorizontalAlignment="Left" Margin="14,116,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Sex" HorizontalAlignment="Left" Margin="118,116,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="14,162,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Age" HorizontalAlignment="Left" Margin="118,162,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
+        <Label Content="BirthDate:" HorizontalAlignment="Left" Margin="14,207,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="BirthDay" HorizontalAlignment="Left" Margin="118,207,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
+        <Label Content="Address:" HorizontalAlignment="Left" Margin="14,254,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Margin="118,254,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="14,300,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="118,300,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
+        <Label Content="Number:" HorizontalAlignment="Left" Margin="14,346,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Number" HorizontalAlignment="Left" Margin="118,346,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
         <Label Content="Student Data Manager" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
-        <Button Content="Add Information" HorizontalAlignment="Left" Margin="72,403,0,0" VerticalAlignment="Top" Height="42" Width="360" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Add Information" HorizontalAlignment="Left" Margin="16,403,0,0" VerticalAlignment="Top" Height="42" Width="360" FontSize="20" FontWeight="Bold" Click="AddStudent_Click"/>
+        <ListBox x:Name="StudentListBox" Grid.Column="0" Margin="474,70,41,85">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock> <Run Text="Name: " FontWeight="Bold"/> <Run Text="{Binding Name}" FontWeight="Bold"/></TextBlock>
+                        <TextBlock> <Run Text="Sex: " FontWeight="Bold"/> <Run Text="{Binding Sex}"/></TextBlock>
+                        <TextBlock> <Run Text="Age: " FontWeight="Bold"/> <Run Text="{Binding Age}"/></TextBlock>
+                        <TextBlock> <Run Text="Birthday: " FontWeight="Bold"/> <Run Text="{Binding Bday}"/></TextBlock>
+                        <TextBlock> <Run Text="Address: " FontWeight="Bold"/> <Run Text="{Binding Address}"/></TextBlock>
+                        <TextBlock> <Run Text="Email: " FontWeight="Bold"/> <Run Text="{Binding Email}"/></TextBlock>
+                        <TextBlock> <Run Text="Number: " FontWeight="Bold"/> <Run Text="{Binding Number}"/></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Delete Information" HorizontalAlignment="Left" Margin="474,403,0,0" VerticalAlignment="Top" Height="42" Width="370" FontSize="20" FontWeight="Bold" Click="DeleteStudent_Click"/>
+        <Button x:Name="ViewBtn" Content="View>>" HorizontalAlignment="Left" Margin="379,404,0,0" VerticalAlignment="Top" Click="Button_Click" Height="41" FontSize="20" Width="81"/>
     </Grid>
 </Window>
