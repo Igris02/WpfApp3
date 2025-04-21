@@ -41,10 +41,16 @@ namespace WpfApp3
             string birthday = BirthDay.Text.Trim();
             string address = Address.Text.Trim();
             string email = Email.Text.Trim();
-            string number = Number.Text.Trim();
+            string number = NUmber.Text.Trim();
 
 
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(sex) || string.IsNullOrEmpty(age) || string.IsNullOrEmpty(birthday) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(number))
+            if (string.IsNullOrEmpty(name) || 
+                string.IsNullOrEmpty(sex) || 
+                string.IsNullOrEmpty(age) || 
+                string.IsNullOrEmpty(birthday) || 
+                string.IsNullOrEmpty(address) || 
+                string.IsNullOrEmpty(email) || 
+                string.IsNullOrEmpty(number))
             {
                 MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -76,7 +82,7 @@ namespace WpfApp3
             BirthDay.Clear();
             Address.Clear();
             Email.Clear();
-            Number.Clear();
+            NUmber.Clear();
         }
 
         private void DeleteStudent_Click(object sender, RoutedEventArgs e)

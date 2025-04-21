@@ -101,5 +101,11 @@
   <ItemGroup>
     <Resource Include="istockphoto-1830042746-612x612.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="siscbg.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
