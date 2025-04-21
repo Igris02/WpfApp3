@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="customer-relationship-management-crm-businessman-or-client-show-global-structure-customer-network-technology-data-exchanges-development-customer-service-digital-marketing-online-social-media-hr-photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="istockphoto-1830042746-612x612.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

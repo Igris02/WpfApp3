@@ -6,24 +6,24 @@
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
         Title="MainWindow" Height="499" Width="470" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF73FABB">
-        <Label Content="Full Name:" HorizontalAlignment="Left" Margin="14,70,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="FullName" HorizontalAlignment="Left" Margin="118,70,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="Sex:" HorizontalAlignment="Left" Margin="14,116,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="Sex" HorizontalAlignment="Left" Margin="118,116,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="Age:" HorizontalAlignment="Left" Margin="14,162,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="Age" HorizontalAlignment="Left" Margin="118,162,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="BirthDate:" HorizontalAlignment="Left" Margin="14,207,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="BirthDay" HorizontalAlignment="Left" Margin="118,207,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="41" FontSize="17"/>
-        <Label Content="Address:" HorizontalAlignment="Left" Margin="14,254,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="Address" HorizontalAlignment="Left" Margin="118,254,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="14,300,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="118,300,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
-        <Label Content="Number:" HorizontalAlignment="Left" Margin="14,346,0,0" VerticalAlignment="Top" Height="40" Width="104" FontSize="17" FontWeight="Bold"/>
-        <TextBox x:Name="Number" HorizontalAlignment="Left" Margin="118,346,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="256" Height="40" FontSize="17"/>
+    <Grid Background="#FF4EED7C">
+        <Label Content="Full Name:" HorizontalAlignment="Left" Margin="14,70,0,0" VerticalAlignment="Top" Height="41" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="FullName" HorizontalAlignment="Left" Margin="109,70,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="41" FontSize="17"/>
+        <Label Content="Sex:" HorizontalAlignment="Left" Margin="14,116,0,0" VerticalAlignment="Top" Height="41" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Sex" HorizontalAlignment="Left" Margin="109,116,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="41" FontSize="17"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="14,162,0,0" VerticalAlignment="Top" Height="41" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Age" HorizontalAlignment="Left" Margin="109,162,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="41" FontSize="17"/>
+        <Label Content="BirthDate:" HorizontalAlignment="Left" Margin="14,207,0,0" VerticalAlignment="Top" Height="41" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="BirthDay" HorizontalAlignment="Left" Margin="109,207,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="41" FontSize="17"/>
+        <Label Content="Address:" HorizontalAlignment="Left" Margin="14,254,0,0" VerticalAlignment="Top" Height="40" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Margin="109,254,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="40" FontSize="17"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="14,300,0,0" VerticalAlignment="Top" Height="40" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="109,300,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="40" FontSize="17"/>
+        <Label Content="Number:" HorizontalAlignment="Left" Margin="14,346,0,0" VerticalAlignment="Top" Height="40" Width="95" FontSize="17" FontWeight="Bold"/>
+        <TextBox x:Name="Number" HorizontalAlignment="Left" Margin="109,346,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="329" Height="40" FontSize="17"/>
         <Label Content="Student Data Manager" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
-        <Button Content="Add Information" HorizontalAlignment="Left" Margin="16,403,0,0" VerticalAlignment="Top" Height="42" Width="360" FontSize="20" FontWeight="Bold" Click="AddStudent_Click"/>
-        <ListBox x:Name="StudentListBox" Grid.Column="0" Margin="474,70,41,85">
+        <Button Content="Add Information" HorizontalAlignment="Left" Margin="109,403,0,0" VerticalAlignment="Top" Height="42" Width="241" FontSize="20" FontWeight="Bold" Click="AddStudent_Click"/>
+        <ListBox x:Name="StudentListBox" Grid.Column="0" Margin="474,70,0,76" HorizontalAlignment="Left" Width="370" FontSize="17" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="0,0,0,10">
@@ -39,6 +39,6 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Button Content="Delete Information" HorizontalAlignment="Left" Margin="474,403,0,0" VerticalAlignment="Top" Height="42" Width="370" FontSize="20" FontWeight="Bold" Click="DeleteStudent_Click"/>
-        <Button x:Name="ViewBtn" Content="View>>" HorizontalAlignment="Left" Margin="379,404,0,0" VerticalAlignment="Top" Click="Button_Click" Height="41" FontSize="20" Width="81"/>
+        <Button x:Name="ViewBtn" Content="View>>" HorizontalAlignment="Left" Margin="357,404,0,0" VerticalAlignment="Top" Click="Button_Click" Height="41" FontSize="20" Width="81"/>
     </Grid>
 </Window>
